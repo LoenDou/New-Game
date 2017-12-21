@@ -27,7 +27,6 @@ public class BossBullet : Bulletbase
 
 
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player"  || other.tag == "bullet")
