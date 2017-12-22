@@ -35,7 +35,7 @@ public class AudioManager : Singleton <AudioManager >
         {
             gameSetting.effectValume = value;
             effectValume = value;
-            mixer.SetFloat("music", value);
+            mixer.SetFloat("effect", value);
         }
     }
 
