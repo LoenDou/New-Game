@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine. UI;
-
+//导演
 public class ScoreDisplay : MonoBehaviour {
     private LevelDirector director;
 
     [SerializeField]
+    //生成两个text文本窗口
     private Text scoreText, maxScoreText;
     [SerializeField]
+    //设置血条数组
     private GameObject[] lifeIcons;
 
 	
@@ -17,7 +19,7 @@ public class ScoreDisplay : MonoBehaviour {
 		
 	}
 	
-	
+	//将分数传入text文本
 	private void Update () {
         scoreText.text = director.Score.ToString();
         maxScoreText.text = director.MaxScore.ToString();

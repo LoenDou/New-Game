@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-
+//菜单
 public class PauseMe : MonoBehaviour {
     [SerializeField]private AudioMixerSnapshot paused, unpaused;
     [SerializeField]private CanvasGroup pauseGroup;

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61777299520437418}
   - component: {fileID: 50180539655895154}
   m_Layer: 0
-  m_Name: boss 1
+  m_Name: boss
   m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 1968378029966918}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad0c6ff1241ee2e4089be43dcd49dfc5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 97994adaee443134483111805d3a62db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -164,5 +164,5 @@ SpriteRenderer:
   m_Size: {x: 0.62, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
