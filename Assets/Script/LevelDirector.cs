@@ -6,6 +6,7 @@ using System;
 public class LevelDirector : MonoBehaviour {
     private static LevelDirector instance;
     public int  playerlifecount = 3;
+    public Rigidbody2D r;
     public static LevelDirector Instance
          
     {
@@ -72,6 +73,7 @@ public class LevelDirector : MonoBehaviour {
         yield return new WaitForSeconds(2);
         currentAirPlane = Instantiate(mainAirplane, mainAirplane.transform.position, Quaternion.identity);
         currentAirPlane.OnDeadEvent += OnPlaneDead;//注册事件
+        
 
         //Instantiate(bossPlane, bossPlane.transform.position, Quaternion.identity);
     }

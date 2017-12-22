@@ -21,6 +21,7 @@ using UnityEngine;
     private float MaxY;
     private float MinX;
     private float MinY;
+    private BoxCollider2D r;
 
 
     public delegate void OnDead();
@@ -32,6 +33,8 @@ using UnityEngine;
         trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
         builletAudio = GetComponent<AudioSource>();
+        r = GetComponent<BoxCollider2D>();
+       
     }
 
 
@@ -41,6 +44,8 @@ using UnityEngine;
         MinX = ScreenXY.MinX;
         MaxY = ScreenXY.MaxY;
         MinY = ScreenXY.MinY;
+        r.enabled = false;
+        StartCoroutine(Decorate());
 
     }
     private void Update()
@@ -68,6 +73,12 @@ using UnityEngine;
     private void Move(Vector3 v1)
     {
         rig.velocity = v1 * speed;
+    }
+    private IEnumerator Decorate()
+    {
+        yield return new WaitForSeconds(2);
+        r.enabled = true ;
+       
     }
 
 
