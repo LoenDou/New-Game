@@ -50,7 +50,7 @@ public class LevelDirector : MonoBehaviour {
         get { return maxScore; }
         private set { maxScore = value; }
     }
-    private MyPlan   currentAirPlane;
+    public  MyPlan   currentAirPlane;
 
     //this（本物体）在初始化时实例化预制体
 

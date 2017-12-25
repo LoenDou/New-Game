@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct ScreenXY
 {
-
+    //将世界坐标赋给摄像机
 
     public static float MaxX { get { return GetWorldPos(new Vector3(1, 1, -10)).x; } }
     public static float MinX { get { return GetWorldPos(new Vector3(0, 0, -10)).x; } }

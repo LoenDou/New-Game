@@ -23,7 +23,7 @@ public class Singleton<T> : MonoBehaviour where T:Component
         }
     }
     protected virtual void Awake()
-    {
+    { //as类型显式强制转换
         instance = this as T;
     }
 

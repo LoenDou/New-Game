@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossBullet : Bulletbase
 {
     [SerializeField]
-    private float speed1 = -1f;
+    private float speed1 ;
     private Transform trans;
 
     private void Start()
@@ -21,7 +21,7 @@ public class BossBullet : Bulletbase
 
     protected override void Move()
     {
-        trans.Translate(Vector3.up * Time.deltaTime * (-5));
+        trans.Translate(Vector3.up * Time.deltaTime * (5));
         Destroy(this.gameObject, 3);
     }
 

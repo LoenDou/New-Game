@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss : MonoBehaviour {
-    public int i;
+ 
     [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
     private float repeatRate;
     [SerializeField]
     private GameObject boom;
- 
+    public int i;
+
 
 
     private void Start () {
@@ -27,6 +28,11 @@ public class Boss : MonoBehaviour {
 	}
     private void Fire() {
         Instantiate(bulletPrefab, this.transform.position, Quaternion.identity);
+        for (int i = 0; i <= 360; i += 45)
+        {
+            Quaternion r = Quaternion.Euler(0, 0, i);
+            Instantiate(bulletPrefab, this.transform.position, r );
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -37,8 +43,8 @@ public class Boss : MonoBehaviour {
             i++;
             if (i == 5)
             {
-
-                Instantiate(boom, transform.position, Quaternion.identity);
+                
+                Instantiate(boom, transform.position, Quaternion .identity );
                 Destroy(this.gameObject);
             }
 
